@@ -89,4 +89,4 @@ Not optimized for high concurrent users (no connection pooling)
 ✅ Conclusion
 
 The Online Bookshop Management System is a simple yet effective way to simulate real-world bookstore operations using core Java, JDBC, and PostgreSQL. It introduces students and developers to key concepts in database design, multithreading, and OOP, and provides a solid base for further expansion into full-stack applications.
-mohini kapse
+
