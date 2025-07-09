@@ -1,92 +1,106 @@
- Online Bookshop Management System
+📘 Currency Converter
 
-✅ Introduction
+✅ 1. Project Purpose
 
-An Online Bookshop Management System is a digital platform that allows users to browse, purchase, and manage books online. It automates the operations of a physical bookstore and provides an efficient way to handle books, authors, categories, orders, and customers using database-driven backend logic.
+A Currency Converter Application allows users to convert a specified amount from one currency to another using pre-defined or real-time exchange rates. The application is designed as a menu-driven console application using:
 
-✅ System Components
+Java (OOP)
 
-1. Users Table
+JDBC (PostgreSQL)
 
-Stores customer data like username and email. It identifies who is placing the order.
+Multithreading
 
-2. Authors Table
+Maven (Project management and build tool)
 
-Contains author information to avoid data redundancy and normalize the database.
+✅ 2. Key Objectives
 
-3. Categories Table
+Convert one currency to another with proper exchange rate.
 
-Classifies books into genres like Fiction, Non-Fiction, Sci-Fi, etc.
+Log each conversion into a PostgreSQL database.
 
-4. Books Table
+Allow the user to view past conversions (history).
 
-Stores the details of each book including title, author, category, and price.
+Use multithreading to log conversions asynchronously.
 
-5. Orders Table
+Maintain a modular, organized structure using OOP principles.
 
-Records each order placed by a user along with a timestamp.
+✅ 3. Technologies Used
 
-6. Order_Items Table
+Component	Technology
 
-Keeps track of the books included in each order and their quantities.
+Language	Java
+Build Tool	Maven
+Database	PostgreSQL
+JDBC Driver	PostgreSQL JDBC (postgresql-42.x.x.jar)
+Multithreading	Java Threads
+Architecture	Object-Oriented Programming
+✅ 4. Maven Project Structure
 
-✅ Relationships Between Tables
+Maven helps manage dependencies and structure:
 
-Users → Orders: One-to-Many (One user can place many orders)
+CurrencyConverterApp/
+├── src/main/java/
+│   └── com/currencyconverter/
+│       ├── model/
+│       ├── service/
+│       ├── util/
+│       ├── thread/
+│       └── Main.java
+├── src/main/resources/
+├── pom.xml
 
-Authors → Books: One-to-Many (One author can write multiple books)
+pom.xml – Manages PostgreSQL JDBC dependency and build lifecycle.
 
-Categories → Books: One-to-Many (One category can include multiple books)
+model – Contains Conversion class (POJO).
 
-Orders → Order_Items: One-to-Many (Each order can contain multiple books)
+service – Contains logic for converting currency and handling database operations.
 
-Books → Order_Items: One-to-Many (Same book can appear in many orders)
+util – Manages database connection and rate provider.
 
-✅ Technologies Used
+thread – Implements a thread for background logging.
 
-Java: Programming language for console interface and backend logic
+Main – Menu-driven user interface for the console.
 
-JDBC (Java Database Connectivity): For connecting and executing SQL queries
+✅ 5. Key Features
 
-PostgreSQL: Relational database system to store and manage data
+📌 Currency Conversion
 
-Multithreading: To perform background tasks like placing orders without blocking the UI
+User inputs source currency, target currency, and amount.
 
-OOP (Object-Oriented Programming): Modular design using classes and objects
+System fetches exchange rate and computes the result.
 
-✅ Key Features
 
-Add/Edit books, authors, and categories
+📌 Database Logging (JDBC + PostgreSQL)
 
-Place an order with multiple books (multithreaded)
+Every conversion is inserted into conversion_history table.
 
-View all orders with user and book details
 
-Structured database management
+📌 Multithreaded Logging
 
-Console-based menu interface
+Background thread logs each conversion for performance and better UX.
 
-✅ Advantages
 
-Centralized management of books and customers
+📌 History Viewer
 
-Reduces manual effort for order handling
+Menu option to view all past conversions from the database.
 
-Scalable and customizable for real-world applications
+✅ 6. Advantages
 
-Encourages good programming practices like OOP and transactions
+Feature	Benefit
+Maven	Manages dependencies, builds, and execution
+JDBC with PostgreSQL	Persistent storage of conversion history
+Multithreading	Async logging improves performance
+OOP Structure	Clean, modular, and maintainable code
+Menu-driven UI	Simple, user-friendly console interface
 
-✅ Disadvantages (Limitations)
+✅ 7. Disadvantages
 
-Console-based interface is not suitable for real users
+Limitation	Impact
+No real-time exchange rates	Needs manual updates or API integration
+Console-based	Not suitable for modern GUI/UX
+Basic validation	Limited error checking
 
-No login/authentication system
-
-No GUI or web support
-
-Not optimized for high concurrent users (no connection pooling)
-
-✅ Conclusion
-
-The Online Bookshop Management System is a simple yet effective way to simulate real-world bookstore operations using core Java, JDBC, and PostgreSQL. It introduces students and developers to key concepts in database design, multithreading, and OOP, and provides a solid base for further expansion into full-stack applications.
-
+CONTACT ME:
+NAME:MOHINI MILIND KAPSE
+GMAIL:mohinikapse02@gmail.com
+GITHUB:mohinikapse
