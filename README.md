@@ -101,6 +101,9 @@ Console-based	Not suitable for modern GUI/UX
 Basic validation	Limited error checking
 
 CONTACT ME:
+
 NAME:MOHINI MILIND KAPSE
+
 GMAIL:mohinikapse02@gmail.com
+
 GITHUB:mohinikapse
