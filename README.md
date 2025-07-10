@@ -1,5 +1,3 @@
-TEAM MEMBERS:
-
 NAME:MOHINI KAPSE 
 
 MANISHA GAIKWAD
@@ -109,6 +107,12 @@ Limitation	Impact
 No real-time exchange rates	Needs manual updates or API integration
 Console-based	Not suitable for modern GUI/UX
 Basic validation	Limited error checking
+<img width="521" height="282" alt="Screenshot 2025-07-10 110355" src="https://github.com/user-attachments/assets/65708359-9222-4949-a70f-4cccb4d9b78e" />
+
+
+
+
+
 
 CONTACT ME:
 
