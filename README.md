@@ -121,6 +121,19 @@ Generate reports (PDF/CSV)
 
 REST API using Spring Boot
 
+
+
+OUTPUT:
+
+
+<img width="649" height="485" alt="Screenshot 2025-07-15 164031" src="https://github.com/user-attachments/assets/95476373-7b24-4a99-8127-2abd4a693e96" />
+
+
+
+
+
+
+
 CONTACT ME:
 
 NAME:MOHINI MILIND KAPSE
