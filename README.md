@@ -34,28 +34,48 @@ PostgreSQL	Relational database to store students, courses, and enrollments
 📁 Project Structure (Maven)
 
 student-course-management/
+
 │
+
 ├── src/main/java/
+
 │   ├── model/
+
 │   │   ├── Student.java
+
 │   │   └── Course.java
+
 │   │
+
 │   ├── dao/
+
 │   │   ├── StudentDAO.java
+
 │   │   └── CourseDAO.java
+
 │   │
+
 │   ├── util/
+
 │   │   └── JPAUtil.java
+
 │   │
+
 │   └── MainApp.java
+
 │
+
 ├── src/main/resources/
+
 │   └── META-INF/persistence.xml
+
 │
+
 ├── pom.xml
 
 
 📄 Project Description:
+
 The Student Course Management System enables:
 
 Adding and listing students
@@ -70,19 +90,29 @@ Viewing course-student relationships
 This project uses JPA annotations like @Entity, @ManyToMany, and @Id to define and manage entity relationships in the database. It stores data persistently using Hibernate and PostgreSQL.
 
 📦 Advantages:
+
 ✅ Easy database handling using JPA/Hibernate
+
 ✅ Clean code architecture (MVC-like)
+
 ✅ Scalable and easily extendable
+
 ✅ Reduces boilerplate SQL code
+
 ✅ Demonstrates real-world object mapping and relationships
 
 ⚠ Limitations:
+
 ⚠ No GUI, only console-based
+
 ⚠ No authentication or user roles
+
 ⚠ Basic validation (can be enhanced)
+
 ⚠ Not suitable for production without improvement in exception handling, logging, and transactions
 
 🚀 Future Improvements:
+
 Add GUI (JavaFX, Swing, or web UI)
 
 Add login system with student/teacher roles
