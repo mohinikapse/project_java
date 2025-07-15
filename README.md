@@ -126,7 +126,8 @@ REST API using Spring Boot
 OUTPUT:
 
 
-<img width="649" height="485" alt="Screenshot 2025-07-15 164031" src="https://github.com/user-attachments/assets/95476373-7b24-4a99-8127-2abd4a693e96" />
+<img width="520" height="473" alt="Screenshot 2025-07-15 192106" src="https://github.com/user-attachments/assets/e5040376-df02-4c0c-bb92-3e110f58fb82" />
+
 
 
 
