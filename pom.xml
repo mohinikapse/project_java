@@ -1,11 +1,24 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>CurrencyConvertor</groupId>
-    <artifactId>currencyconvertor</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-  </parent>
-  <groupId>Currencyconverter</groupId>
-  <artifactId>currencyconvertor</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-</project>
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>StudentCourseManagementSystem</name>
+	<comment>
+  </comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>org.eclipse.m2e.core.maven2Builder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+		<nature>org.eclipse.m2e.core.maven2Nature</nature>
+	</natures>
+</projectDescription>
