@@ -1,0 +1,56 @@
+package main;
+
+import dao.*;
+import model.*;
+import java.util.*;
+
+public class MainApp {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        StudentDAO studentDAO = new StudentDAO();
+        while (true) {
+            System.out.println("\n===== Student Course Management =====");
+            System.out.println("1. Add Student");
+            System.out.println("2. Add Course");
+            System.out.println("3. Enroll Student to Course");
+            System.out.println("4. List Students");
+            System.out.println("5. List Courses");
+            System.out.println("6. Exit");
+
+            System.out.print("Enter choice: ");
+            int ch = sc.nextInt();
+            sc.nextLine();  // consume newline
+
+            switch (ch) {
+                case 1:
+                    System.out.print("Enter student name: ");
+                    Student s = new Student();
+                    s.setName(sc.nextLine());
+                    studentDAO.addStudent(s);
+                    break;
+
+                case 2:
+                    System.out.print("Enter course title: ");
+                    Course c = new Course();
+                    c.setTitle(sc.nextLine());
+                    courseDAO.addCourse(c);
+                    break;
+
+                case 3:
+                    // Enrollment logic (fetch student and course by ID)
+                    break;
+
+                case 4:
+                    studentDAO.getAllStudents().forEach(System.out::println);
+                    break;
+
+                case 5:
+                    courseDAO.getAllCourses().forEach(System.out::println);
+                    break;
+
+                case 6:
+                    System.exit(0);
+            }
+        }
+    }
+}
