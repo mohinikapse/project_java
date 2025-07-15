@@ -7,22 +7,32 @@ SANIYA PATHAN
 DIVYA GAIKWAD
 
 📘 Project Title:
+
 Student Course Management System (Console-Based)
+
 Technologies: Java, Maven, JPA, Hibernate, PostgreSQL
 
 🎯 Objective:
+
 To develop a menu-driven console application that allows students to be added, courses to be created, and students to be enrolled in courses using Object-Oriented Programming principles and JPA/Hibernate for database operations.
 
 🛠 Technologies Used:
+
 Technology	Description
+
 Java	Base language for building the application
+
 Maven	Build tool for managing dependencies and project lifecycle
+
 JPA (Java Persistence API)	Interface-based ORM standard for mapping Java objects to relational data
+
 Hibernate	Implementation of JPA for database operations
+
 PostgreSQL	Relational database to store students, courses, and enrollments
 
 
 📁 Project Structure (Maven)
+
 student-course-management/
 │
 ├── src/main/java/
