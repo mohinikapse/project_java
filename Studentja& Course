@@ -1,0 +1,23 @@
+package dao;
+
+import model.Student;
+import util.JPAUtil;
+
+import javax.persistence.*;
+import java.util.List;
+
+public class StudentDAO {
+    public void addStudent(Student s) {
+        EntityManager em = JPAUtil.getEntityManager();
+        EntityTransaction tx = em.getTransaction();
+        tx.begin();
+        em.persist(s);
+        tx.commit();
+        em.close();
+    }
+
+    public List<Student> getAllStudents() {
+        EntityManager em = JPAUtil.getEntityManager();
+        return em.createQuery("from Student", Student.class).getResultList();
+    }
+}
