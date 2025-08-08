@@ -6,139 +6,128 @@ SANIYA PATHAN
 
 DIVYA GAIKWAD
 
-📘 Project Title:
+SONAM NAVGHARE
 
-Student Course Management System (Console-Based)
+🎓 Student Record Management System 
 
-Technologies: Java, Maven, JPA, Hibernate, PostgreSQL
+✅ 1. Project Overview
 
-🎯 Objective:
+This project is a full-stack web application that demonstrates the integration between
+a Spring Boot RESTful backend and a responsive frontend built using HTML, CSS, and JavaScript.
+It manages student data using PostgreSQL as the database and follows the MVC (Model-View-Controller) architecture.
 
-To develop a menu-driven console application that allows students to be added, courses to be created, and students to be enrolled in courses using Object-Oriented Programming principles and JPA/Hibernate for database operations.
+✅ 2. Objective
+To build a responsive and interactive web application where users can:
+Add new students
+View all students
+Delete a student
+All operations are performed via REST APIs and updated in the database in real time.
 
-🛠 Technologies Used:
+✅ 3. Architecture: MVC (Model-View-Controller)
+Model: Represents the data (Student entity) and database interaction via JPA.
+View: Frontend built with HTML, CSS, and JavaScript (acts as the user interface).
+Controller: Handles HTTP requests, connects frontend with backend logic.
 
-Technology	Description
+✅ 4. Technologies Used
+Layer	Technology
+Frontend	HTML, CSS, JavaScript (Fetch API)
+Backend	Spring Boot (REST API), JPA
+Database	PostgreSQL
+Architecture	MVC (Model-View-Controller)
+Tools	IntelliJ or Eclipse, Postman, pgAdmin, Live Server
 
-Java	Base language for building the application
+✅ 5. Working of the Project
+🔹 Frontend (View Layer)
+A clean, mobile-responsive HTML form allows the user to enter student name and email.
+Data is sent to the backend using JavaScript's fetch() API.
+The list of students is fetched and displayed using dynamic DOM manipulation.
+🔹 Backend (Controller + Business Layer)
+The Spring Boot app exposes APIs like:
+GET /api/students – fetch all students
 
-Maven	Build tool for managing dependencies and project lifecycle
+POST /api/students – add a new student
 
-JPA (Java Persistence API)	Interface-based ORM standard for mapping Java objects to relational data
+DELETE /api/students/{id} – delete a student
 
-Hibernate	Implementation of JPA for database operations
 
-PostgreSQL	Relational database to store students, courses, and enrollments
+The controller calls the Service layer, which contains business logic and uses the Repository layer to interact with PostgreSQL.
 
 
-📁 Project Structure (Maven)
+🔹 Database (Model Layer)
 
-student-course-management/
+A PostgreSQL database contains a student table with fields:
 
-│
+id (primary key)
 
-├── src/main/java/
+name
 
-│   ├── model/
+email
 
-│   │   ├── Student.java
 
-│   │   └── Course.java
+Spring JPA automatically maps the Student Java class to the table and performs CRUD operations.
 
-│   │
 
-│   ├── dao/
+✅ 6. Integration Flow
 
-│   │   ├── StudentDAO.java
+1. User fills form → frontend sends POST request to Spring Boot.
 
-│   │   └── CourseDAO.java
 
-│   │
+2. Spring Boot saves student → JPA saves to PostgreSQL.
 
-│   ├── util/
 
-│   │   └── JPAUtil.java
+3. Frontend fetches list → backend returns JSON → rendered dynamically on page.
 
-│   │
 
-│   └── MainApp.java
+4. Delete button clicked → DELETE request sent → backend deletes → list refreshed.
 
-│
 
-├── src/main/resources/
 
-│   └── META-INF/persistence.xml
+✅ 7. Features
 
-│
+📬 RESTful APIs for student CRUD
 
-├── pom.xml
+🎨 Responsive UI with form and list
 
+📦 Real-time sync with PostgreSQL
 
-📄 Project Description:
+🔄 Full integration: frontend ⇆ backend ⇆ DB
 
-The Student Course Management System enables:
+🧱 MVC pattern for clean code organization
 
-Adding and listing students
+✅ 8. Advantages
 
-Creating and listing courses
+Full-stack exposure for students/new developers
 
-Enrolling students into courses
+Clear separation of concerns (MVC)
 
-Viewing course-student relationships
+Demonstrates real-world REST API usage
 
+Easy to extend (e.g., add Update functionality, validations)
 
-This project uses JPA annotations like @Entity, @ManyToMany, and @Id to define and manage entity relationships in the database. It stores data persistently using Hibernate and PostgreSQL.
+✅ 9. Disadvantages / Limitations
 
-📦 Advantages:
+No login/authentication (public access)
 
-✅ Easy database handling using JPA/Hibernate
+No client-side validation or error handling
 
-✅ Clean code architecture (MVC-like)
+No pagination or sorting for large data sets
 
-✅ Scalable and easily extendable
+Limited to basic CRUD functionality
 
-✅ Reduces boilerplate SQL code
+✅ 10. Scope for Improvement
 
-✅ Demonstrates real-world object mapping and relationships
+Add Update/Edit functionality
 
-⚠ Limitations:
+Integrate form validation
 
-⚠ No GUI, only console-based
+Use Bootstrap or Tailwind CSS for better UI
 
-⚠ No authentication or user roles
+Add authentication system (JWT / Spring Security)
 
-⚠ Basic validation (can be enhanced)
+Deploy backend with frontend on platforms like Render, Netlify, or Vercel
 
-⚠ Not suitable for production without improvement in exception handling, logging, and transactions
 
-🚀 Future Improvements:
 
-Add GUI (JavaFX, Swing, or web UI)
+---
 
-Add login system with student/teacher roles
-
-Generate reports (PDF/CSV)
-
-REST API using Spring Boot
-
-
-
-OUTPUT:
-
-
-<img width="520" height="473" alt="Screenshot 2025-07-15 192106" src="https://github.com/user-attachments/assets/e5040376-df02-4c0c-bb92-3e110f58fb82" />
-
-
-
-
-
-
-
-
-CONTACT ME:
-
-NAME:MOHINI MILIND KAPSE
-
-GMAIL:mohinikapse02@gmail.com
-
-GITHUB:mohinikapse
+Would you like this theory in a downloadable PDF or Word format?
