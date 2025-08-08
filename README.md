@@ -126,8 +126,9 @@ Add authentication system (JWT / Spring Security)
 
 Deploy backend with frontend on platforms like Render, Netlify, or Vercel
 
+~OUT PUT
 
+<img width="1234" height="927" alt="image" src="https://github.com/user-attachments/assets/99b5e265-a1fd-4731-955f-ad30ffadb447" />
 
----
 
 Would you like this theory in a downloadable PDF or Word format?
