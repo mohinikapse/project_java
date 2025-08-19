@@ -8,127 +8,140 @@ DIVYA GAIKWAD
 
 SONAM NAVGHARE
 
-🎓 Student Record Management System 
+🎓 Student Manager Project 
 
-✅ 1. Project Overview
+1. Introduction
 
-This project is a full-stack web application that demonstrates the integration between
-a Spring Boot RESTful backend and a responsive frontend built using HTML, CSS, and JavaScript.
-It manages student data using PostgreSQL as the database and follows the MVC (Model-View-Controller) architecture.
+The Student Manager project is a full-stack application that helps manage student information (e.g., name, email, course, enrollment details).
+It is built using:
 
-✅ 2. Objective
-To build a responsive and interactive web application where users can:
-Add new students
-View all students
-Delete a student
-All operations are performed via REST APIs and updated in the database in real time.
+Spring Boot REST API (Backend)
 
-✅ 3. Architecture: MVC (Model-View-Controller)
-Model: Represents the data (Student entity) and database interaction via JPA.
-View: Frontend built with HTML, CSS, and JavaScript (acts as the user interface).
-Controller: Handles HTTP requests, connects frontend with backend logic.
+Angular (Frontend UI)
 
-✅ 4. Technologies Used
-Layer	Technology
-Frontend	HTML, CSS, JavaScript (Fetch API)
-Backend	Spring Boot (REST API), JPA
-Database	PostgreSQL
-Architecture	MVC (Model-View-Controller)
-Tools	IntelliJ or Eclipse, Postman, pgAdmin, Live Server
-
-✅ 5. Working of the Project
-🔹 Frontend (View Layer)
-A clean, mobile-responsive HTML form allows the user to enter student name and email.
-Data is sent to the backend using JavaScript's fetch() API.
-The list of students is fetched and displayed using dynamic DOM manipulation.
-🔹 Backend (Controller + Business Layer)
-The Spring Boot app exposes APIs like:
-GET /api/students – fetch all students
-
-POST /api/students – add a new student
-
-DELETE /api/students/{id} – delete a student
+PostgreSQL (Database)
 
 
-The controller calls the Service layer, which contains business logic and uses the Repository layer to interact with PostgreSQL.
+The system provides functionalities like add student, view students, update student details, and delete student records.
 
 
-🔹 Database (Model Layer)
+2. Architecture
 
-A PostgreSQL database contains a student table with fields:
+This project follows MVC architecture and 3-tier design:
 
-id (primary key)
+1. Frontend (Angular – View Layer)
 
-name
+Provides an intuitive UI for managing students.
 
-email
+Uses Angular components, services, and routing.
 
+Calls backend APIs via Angular HttpClient.
 
-Spring JPA automatically maps the Student Java class to the table and performs CRUD operations.
-
-
-✅ 6. Integration Flow
-
-1. User fills form → frontend sends POST request to Spring Boot.
-
-
-2. Spring Boot saves student → JPA saves to PostgreSQL.
-
-
-3. Frontend fetches list → backend returns JSON → rendered dynamically on page.
-
-
-4. Delete button clicked → DELETE request sent → backend deletes → list refreshed.
+Built with HTML, CSS, Bootstrap for responsive design.
 
 
 
-✅ 7. Features
+2. Backend (Spring Boot – Controller & Service Layer)
 
-📬 RESTful APIs for student CRUD
+Controllers → Expose REST API endpoints (/students).
 
-🎨 Responsive UI with form and list
+Services → Contain business logic for student management.
 
-📦 Real-time sync with PostgreSQL
+Repositories (Spring Data JPA) → Handle database operations.
 
-🔄 Full integration: frontend ⇆ backend ⇆ DB
-
-🧱 MVC pattern for clean code organization
-
-✅ 8. Advantages
-
-Full-stack exposure for students/new developers
-
-Clear separation of concerns (MVC)
-
-Demonstrates real-world REST API usage
-
-Easy to extend (e.g., add Update functionality, validations)
-
-✅ 9. Disadvantages / Limitations
-
-No login/authentication (public access)
-
-No client-side validation or error handling
-
-No pagination or sorting for large data sets
-
-Limited to basic CRUD functionality
-
-✅ 10. Scope for Improvement
-
-Add Update/Edit functionality
-
-Integrate form validation
-
-Use Bootstrap or Tailwind CSS for better UI
-
-Add authentication system (JWT / Spring Security)
-
-Deploy backend with frontend on platforms like Render, Netlify, or Vercel
-
-~OUT PUT
-
-<img width="1234" height="927" alt="image" src="https://github.com/user-attachments/assets/99b5e265-a1fd-4731-955f-ad30ffadb447" />
+JSON data is exchanged with Angular frontend.
 
 
-Would you like this theory in a downloadable PDF or Word format?
+
+3. Database (PostgreSQL – Model Layer)
+
+Stores student records.
+
+Connected via Spring Data JPA + Hibernate.
+
+Table Example:
+
+
+CREATE TABLE students (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    course VARCHAR(100),
+    enrollment_date DATE
+);
+
+
+3. Workflow
+
+1. User interacts with Angular UI (e.g., clicks "Add Student").
+
+
+2. Angular sends an HTTP POST request to Spring Boot REST API.
+
+
+3. Spring Boot Controller receives the request and calls the Service layer.
+
+
+4. Service layer validates input and interacts with Repository.
+
+
+5. Repository saves/reads data from PostgreSQL.
+
+
+6. JSON response is returned to Angular.
+
+
+7. Angular updates the UI dynamically (student list, forms, etc.).
+
+
+
+4. Features
+
+➕ Add Student – Register a new student.
+
+📋 View Students – Display all students in a responsive table.
+
+✏ Update Student – Modify existing student details.
+
+❌ Delete Student – Remove student records.
+
+🔎 Search/Filter – Search students by name or course.
+
+
+
+5. Technologies Used
+
+Backend → Spring Boot, REST API, Spring Data JPA, Hibernate
+
+Database → PostgreSQL
+
+Frontend → Angular, TypeScript, HTML5, CSS3, Bootstrap
+
+Tools → Postman, pgAdmin, IntelliJ IDEA, VS Code
+
+
+
+6. Advantages
+
+✅ Simple and intuitive student management system.
+✅ Clear separation of concerns (MVC).
+✅ Responsive UI with Angular + Bootstrap.
+✅ REST APIs → reusable for mobile or other frontends.
+✅ PostgreSQL → robust and reliable storage.
+
+7. Disadvantages / Challenges
+
+⚠ Initial setup of Angular + Spring Boot can be complex.
+⚠ Requires handling CORS for API communication.
+⚠ PostgreSQL setup needed on local/remote environment.
+
+
+8. Conclusion
+
+The Student Manager Project is a full-stack solution for managing student data effectively.
+It demonstrates proper integration of Angular frontend with Spring Boot backend and PostgreSQL database using MVC architecture.
+This project can be extended to include authentication, role-based access, dashboards, and reports for real-world use.
+
+OUTPUT
+
+<img width="1398" height="780" alt="image" src="https://github.com/user-attachments/assets/d3f1eaaf-0b51-4f60-a026-791aab093960" />
