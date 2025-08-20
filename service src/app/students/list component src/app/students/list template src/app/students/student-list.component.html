@@ -1,0 +1,24 @@
+<div class="wrap">
+  <header>
+    <h1>Student Manager</h1>
+    <button class="primary" (click)="toCreate()">+ Add Student</button>
+  </header>
+
+  <div *ngIf="loading">Loading...</div>
+  <div class="error" *ngIf="error">{{ error }}</div>
+
+  <ul class="list" *ngIf="students?.length">
+    <li *ngFor="let s of students">
+      <div>
+        <strong>{{ s.name }}</strong>
+        <small>{{ s.email }}</small>
+      </div>
+      <div class="actions">
+        <button (click)="toEdit(s)">Edit</button>
+        <button class="danger" (click)="onDelete(s.id)">Delete</button>
+      </div>
+    </li>
+  </ul>
+
+  <p *ngIf="!students?.length && !loading">No students yet. Add one!</p>
+</div>
